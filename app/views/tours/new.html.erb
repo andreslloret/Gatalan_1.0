@@ -1,0 +1,42 @@
+<h1>New Tour</h1>
+
+<%= form_with(model: @tour, url: tours_path) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= form_for [@tour, @booking] do |f| %>
+  <%= f.label :date %>
+  <%= f.date_select :date %>
+
+  <%= f.label :number_of_people %>
+  <%= f.number_field :number_of_people %>
+
+  <%= f.submit "Create Booking", class: "btn btn-primary" %>
+<% end %>
