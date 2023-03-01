@@ -1,0 +1,30 @@
+# app/views/tours/index.html.erb
+<h1>All Tours</h1>
+
+<%= link_to "New Tour", new_tour_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tours.each do |tour| %>
+      <tr>
+        <td><%= tour.name %></td>
+        <td><%= tour.description %></td>
+        <td><%= tour.price %></td>
+        <td><%= tour.date %></td>
+        <td><%= link_to "Edit", edit_tour_path(tour) %></td>
+        <td><%= link_to "Delete", tour_path(tour), method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
