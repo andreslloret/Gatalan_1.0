@@ -1,12 +1,20 @@
 <h1><%= @tour.name %></h1>
 
+<% if @tour.image.attached? %>
+  <%= image_tag @tour.image.variant(resize_to_limit: [800, 600]) %>
+<% end %>
+
 <p><%= @tour.description %></p>
 
 <p><strong>Date:</strong> <%= @tour.date.strftime("%B %d, %Y") %></p>
 
 <p><strong>Price:</strong> <%= number_to_currency(@tour.price) %></p>
 
-<p><%= link_to "Edit", edit_tour_path(@tour) %> | <%= link_to "Delete", tour_path(@tour), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<p>
+  <%= link_to "Edit", edit_tour_path(@tour) %> |
+  <%= link_to "Delete", tour_path(@tour), method: :delete, data: { confirm: "Are you sure?" } %> |
+  <%= link_to "Back to Tours", tours_path %>
+</p>
 
 <%= form_with(model: [@tour, @tour.bookings.new], url: tour_create_booking_path(@tour)) do |form| %>
   <div class="form-group">

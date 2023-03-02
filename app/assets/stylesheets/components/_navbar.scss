@@ -1,12 +1,45 @@
-.navbar-lewagon {
+.navbar-nav {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: right;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-link {
+  color: rgb(231, 11, 11);
+  text-transform: uppercase;
+  border: 1px solid black;
+  color: white;
+  padding: 50px 80px;
+  transition: all 0.2s;
+  border-radius: 20px;
+  margin: 0 10px; /* add margin to create space between the buttons */
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.nav-link:active {
+  transform: scale(0.9);
+}
+
+.navbar-nav > .active > .nav-link {
+  color: black;
+  background-color: rgb(219, 5, 5);
+}
+
+.navbar-lewagon {
+  display: flex;
+  justify-content: center;
+  background: rgb(205, 0, 0);
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 240px;
+  height: 50px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
 }
