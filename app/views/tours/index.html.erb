@@ -22,34 +22,3 @@
     </div>
   <% end %>
 </div>
-
-<%= link_to "New Tour", new_tour_path, class: "btn btn-primary" %>
-
-<%= form_with model: @tour, local: true do |form| %>
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :price %>
-    <%= form.text_field :price, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :date %>
-    <%= form.date_select :date, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :image %>
-    <%= form.file_field :image, class: 'form-control' %>
-  </div>
-
-  <%= form.submit "Create Tour", class: "btn btn-primary" %>
-<% end %>

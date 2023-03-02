@@ -4,4 +4,5 @@ class Tour < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :date, presence: true
+  has_one_attached :image
 end
