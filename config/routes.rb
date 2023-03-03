@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
-  get 'grayscale/index'
+  root to: 'pages#home'
+
   devise_for :users
 
-  root to: 'tours#index'
-
   resources :tours do
-    post 'create_booking', on: :member
+  resources :bookings, only: [:new, :create]
   end
-end
+
+  resources :bookings, only: [:index, :show, :edit, :update] do
+  member do
+  patch :accept
+  patch :decline
+  end
+  end
+
+  resources :users, only: [:show] do
+  resources :bookings, only: [:index]
+  end
+
+  delete 'bookings/:id', to: 'bookings#destroy', as: 'destroy_booking'
+
+  get 'dashboard', to: 'bookings#dashboard'
+  end
