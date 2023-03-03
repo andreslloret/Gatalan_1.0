@@ -4,7 +4,6 @@ class BookingsController < ApplicationController
   def create
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.new(tour: @tour, user: current_user)
-
     if @booking.save
       redirect_to @tour, notice: 'Booking was successfully created.'
     else
