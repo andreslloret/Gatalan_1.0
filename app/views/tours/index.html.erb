@@ -18,7 +18,7 @@
           <p class="card-text"><strong>Price:</strong> <%= number_to_currency(tour.price) %></p>
           <%# <p><%= link_to "Book Now", new_tour_booking_path(tour), class: "btn btn-primary" %>
           <div class="d-flex justify-content-between align-items-center">
-            <%= button_to "Edit", edit_tour_path(tour), class: "btn btn-secondary" %>
+            <%= button_to "Book", tour_path(tour), method: :get, class: "btn btn-secondary" %>
             <%= button_to "Delete", tour_path(tour), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
           </div>
         </div>
