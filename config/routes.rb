@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show] do
-  resources :bookings, only: [:index]
   end
 
   delete 'bookings/:id', to: 'bookings#destroy', as: 'destroy_booking'

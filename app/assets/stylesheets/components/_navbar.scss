@@ -5,14 +5,14 @@
 }
 
 .nav-link {
-  color: rgb(231, 11, 11);
+  color: white;
+  background-color: yellow;
   text-transform: uppercase;
   border: 1px solid black;
-  color: white;
-  padding: 50px 80px;
+  padding: 10px 30px;
   transition: all 0.2s;
   border-radius: 20px;
-  margin: 0 10px; /* add margin to create space between the buttons */
+  margin: 0 10px;
 }
 
 .nav-link:hover {
@@ -42,4 +42,20 @@
 .container-fluid {
   display: flex;
   justify-content: space-between;
+}
+
+.booking-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.booking-btn:hover {
+  background-color: darkblue;
 }
