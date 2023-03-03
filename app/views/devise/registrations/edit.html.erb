@@ -35,3 +35,104 @@
 <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
 <%= link_to "Back", :back %>
+<style>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  background-color: rgba(89, 101, 94, 0.7); /* changed to F9FBB2 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid #A5ABAF; /* changed to A5ABAF */
+  transition: border-color 0.5s ease-in-out;
+}
+
+.box:hover {
+  border-color: #F8FCDA; /* changed to F8FCDA */
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  50% {
+    border-color: black; /* changed to black */
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #F8FCDA;
+  border-color: #0c0c0c;
+}
+
+.btn-primary:hover {
+  background-color: #d9d9d9;
+  border-color: #050505;
+}
+
+.btn {
+  color: #000000;
+}
+
+.form-control:focus {
+  border-color: #8f8f8f;
+  box-shadow: 0 0 0 0.2rem rgba(164, 164, 164, 0.25);
+}
+
+label {
+  font-weight: bold;
+}
+
+h2, h3 {
+  color: #F8FCDA; /* changed to F8FCDA */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+.form-actions input[type="submit"] {
+  background-color: #F8FCDA;
+  border-color: #0c0c0c;
+}
+
+.form-actions input[type="submit"]:hover {
+  background-color: #d9d9d9;
+  border-color: #050505;
+}
+
+.form-actions .btn {
+  color: #000000;
+}
+
+.form-actions .btn:hover {
+  color: #000000;
+}
+
+.form-actions .btn-danger {
+  background-color: #FF4136;
+  border-color: #FF4136;
+}
+
+.form-actions .btn-danger:hover {
+  background-color: #E50000;
+  border-color: #E50000;
+}
+
+.alert {
+  background-color: #FF4136;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+</style>

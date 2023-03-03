@@ -91,8 +91,10 @@
 
         <h1 class="title">Welcome to Gatalan!</h1>
         <p class="slogan">Discover the Best of Barcelona with Our Guides and Excursions</p>
-        <a href="http://127.0.0.1:3000/users/sign_in" class="button">Log In</a>
-        <a href="http://127.0.0.1:3000/users/sign_up" class="button">Sign Up</a>
+        <% unless user_signed_in? %>
+          <a href="http://127.0.0.1:3000/users/sign_in" class="button">Log In</a>
+          <a href="http://127.0.0.1:3000/users/sign_up" class="button">Sign Up</a>
+        <% end %>
         </div>
 
     </div>
