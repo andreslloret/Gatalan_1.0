@@ -6,7 +6,11 @@
   <% @tours.each do |tour| %>
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
+      <% if tour.photo.attached?  %>
+      <%= cl_image_tag tour.photo.key, class: "bd-placeholder-img card-img-top" %>
+      <% else %>
         <%= image_tag "https://source.unsplash.com/random/?barcelona", class: "bd-placeholder-img card-img-top", alt: tour.name %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= tour.name %></h5>
           <p class="card-text"><%= tour.description %></p>

@@ -7,6 +7,10 @@ class ToursController < ApplicationController
     @tour = Tour.new
   end
 
+  def tours_params
+    params.require(:article).permit(:title, :body, :photo)
+  end
+
   def create
     @tour = Tour.new(tour_params)
     @tour.user = current_user
@@ -36,6 +40,6 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :description, :date, :price, :image)
+    params.require(:tour).permit(:name, :description, :date, :price, :photo)
   end
 end
