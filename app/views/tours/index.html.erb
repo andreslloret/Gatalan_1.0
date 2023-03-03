@@ -1,8 +1,6 @@
 <h1>All Tours</h1>
 
 <%= link_to "New Tour", new_tour_path, class: "btn btn-primary" %>
-<%= link_to "Delete", destroy_tour_path(tour), method: :delete, data: { confirm: "Are you sure you want to delete this tour?" }, class: "btn btn-danger" %>
-
 
 <div class="row">
   <% @tours.each do |tour| %>

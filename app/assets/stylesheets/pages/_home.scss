@@ -5275,6 +5275,8 @@ fieldset:disabled .btn {
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
+  height: 300px;
+  object-fit: cover;
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
