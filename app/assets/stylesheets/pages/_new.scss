@@ -12,11 +12,24 @@ body {
 }
 
 .box {
-  background-color: rgba(158, 40, 40, 0.7);
+  background-color: rgba(89, 101, 94, 0.7); /* changed to F9FBB2 */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
   width: 500px;
+  border: 1px solid #A5ABAF; /* changed to A5ABAF */
+  transition: border-color 0.5s ease-in-out;
+}
+
+.box:hover {
+  border-color: #F8FCDA; /* changed to F8FCDA */
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  50% {
+    border-color: black; /* changed to black */
+  }
 }
 
 .form-group {
@@ -24,17 +37,17 @@ body {
 }
 
 .btn-primary {
-  background-color: #ff0000;
+  background-color: #F8FCDA;
   border-color: #0c0c0c;
 }
 
 .btn-primary:hover {
-  background-color: #d90000;
+  background-color: #d9d9d9;
   border-color: #050505;
 }
 
 .btn {
-  color: #fff;
+  color: #000000;
 }
 
 .form-control:focus {

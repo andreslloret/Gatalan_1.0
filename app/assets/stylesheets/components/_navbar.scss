@@ -1,17 +1,17 @@
 .navbar-nav {
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-items: center;
 }
 
 .nav-link {
-  color: white;
-  background-color: yellow;
+  color: #F8FCDA;
   text-transform: uppercase;
-  border: 1px solid black;
-  padding: 10px 30px;
+  border: 1px solid #A5ABAF;
+  background-color: #E3E9C2;
+  padding: 50px 80px;
   transition: all 0.2s;
-  border-radius: 20px;
+  border-radius: 30px;
   margin: 0 10px;
 }
 
@@ -25,13 +25,13 @@
 
 .navbar-nav > .active > .nav-link {
   color: black;
-  background-color: rgb(219, 5, 5);
+  background-color: #F9FBB2;
 }
 
 .navbar-lewagon {
   display: flex;
   justify-content: center;
-  background: rgb(205, 0, 0);
+  background: #d5bcac;
 }
 
 .navbar-lewagon .navbar-brand img {
