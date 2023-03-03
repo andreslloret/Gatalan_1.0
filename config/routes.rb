@@ -1,14 +1,24 @@
-class BookingsController < ApplicationController
-  before_action :authenticate_user!
+Rails.application.routes.draw do
+  root to: 'pages#home'
 
-  def create
-    @tour = Tour.find(params[:tour_id])
-    @booking = Booking.new(tour: @tour, user: current_user)
+  devise_for :users
 
-    if @booking.save
-      redirect_to @tour, notice: 'Booking was successfully created.'
-    else
-      redirect_to @tour, alert: 'Booking could not be created.'
-    end
+  resources :tours do
+  resources :bookings, only: [:new, :create]
   end
-end
+
+  resources :bookings, only: [:index, :show, :edit, :update] do
+  member do
+  patch :accept
+  patch :decline
+  end
+  end
+
+  resources :users, only: [:show] do
+  resources :bookings, only: [:index]
+  end
+
+  delete 'bookings/:id', to: 'bookings#destroy', as: 'destroy_booking'
+
+  get 'dashboard', to: 'bookings#dashboard'
+  end
