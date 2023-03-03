@@ -18,6 +18,13 @@ class ToursController < ApplicationController
     end
   end
 
+  def destroy
+    @tour = Tour.find(params[:id])
+    @tour.destroy
+    redirect_to tours_path
+  end
+
+
 
   def edit
     @tour = Tour.find(params[:id])
