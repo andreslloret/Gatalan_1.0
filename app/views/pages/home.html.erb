@@ -1,2 +1,101 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Gatalan</title>
+  <link rel="icon" type="image/x-icon" href="https://github.com/GreggCarem/GatoAlan/blob/main/Untitled%201.png?raw=true">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <style>
+  body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.glass-box {
+  background-image: url('https://images.unsplash.com/photo-1543349683-6e584f3e2b93');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color:#000000;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.logo {
+  width: 480px;
+  height: auto;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 40px;
+}
+
+.logo:hover {
+  transform: scaleX(1.05);
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #F8FCDA;
+  color: #000000;
+  border-radius: 20px;
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #F9FBB2;
+  transform: scaleX(1.05);
+}
+
+.box {
+  background-color:  rgba(89, 101, 94, 0.7); /* changed to F9FBB2 */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid #A5ABAF; /* changed to A5ABAF */
+  transition: border-color 0.5s ease-in-out;
+  margin-top: 50px; /* added margin-top to prevent overlap with nav bar */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="center">
+
+    <div class="box">
+      <img class="logo" src="https://github.com/GreggCarem/GatoAlan/blob/main/Untitled%201.png?raw=true" alt="Gatalan Logo">
+      <div>
+
+        <h1 class="title">Welcome to Gatalan!</h1>
+        <p class="slogan">Discover the Best of Barcelona with Our Guides and Excursions</p>
+        <a href="http://127.0.0.1:3000/users/sign_in" class="button">Log In</a>
+        <a href="http://127.0.0.1:3000/users/sign_up" class="button">Sign Up</a>
+        </div>
+
+    </div>
+  </div>
+</body>
+</html>
